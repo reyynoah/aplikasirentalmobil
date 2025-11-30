@@ -19,30 +19,38 @@ namespace aplikasirentalmobil
 
         private void DashboardAdmin_Load(object sender, EventArgs e)
         {
-            label1.Text = "Selamat Datang, Admin!";
+           
+            label1.Text = "Selamat Datang di Panel Admin";
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 login = new Form1();
-            login.Show();
+            
+            if (MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Form1 login = new Form1();
+                login.Show();
+            }
         }
 
         private void btnMobil_Click(object sender, EventArgs e)
         {
+            
             FormMobil mobil = new FormMobil();
-            mobil.Show();
+            mobil.ShowDialog(); 
         }
 
         private void btnPelanggan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Menu Kelola Pelanggan belum dibuat.");
+            FormPelanggan mobil = new FormPelanggan();
+            mobil.ShowDialog();
         }
 
         private void btnTransaksi_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Menu Kelola Transaksi belum dibuat.");
+            FormTransaksi trans = new FormTransaksi();
+            trans.ShowDialog();
         }
     }
 }

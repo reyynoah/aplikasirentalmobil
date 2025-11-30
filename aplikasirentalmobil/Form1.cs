@@ -13,9 +13,12 @@ namespace aplikasirentalmobil
 {
     public partial class Form1 : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-OMHB2120;Initial Catalog=rentalmobil;Integrated Security=True");
-        SqlCommand cmd;
-        SqlDataReader reader;
+        SqlConnection con = new SqlConnection(
+            "Data Source=LAPTOP-OMHB2120;Initial Catalog=rentalmobil;Integrated Security=True"
+        );
+
+        public static int idUserLogin = 0;        
+        public static int idPelangganLogin = 0;   
 
         public Form1()
         {
@@ -24,47 +27,86 @@ namespace aplikasirentalmobil
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
-            if (username == "" || password == "")
+            using (SqlConnection con = new SqlConnection("Data Source=LAPTOP-OMHB2120;Initial Catalog=rentalmobil;Integrated Security=True"))
             {
-                MessageBox.Show("Username dan Password tidak boleh kosong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                con.Open();
-
-                string query = "SELECT * FROM tb_user WHERE username=@username AND password=@password";
-                cmd = new SqlCommand(query, con);
-
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                reader = cmd.ExecuteReader();
-
-                if (reader.HasRows)
+                try
                 {
-                    MessageBox.Show("Login berhasil!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    con.Open();
 
-                    this.Hide(); // sembunyikan form login
+                
+                    SqlCommand cmd = new SqlCommand(
+                        "SELECT id_user, role FROM tb_user WHERE username=@user AND password=@pass",
+                        con
+                    );
 
-                    DashboardAdmin dashboard = new DashboardAdmin();
-                    dashboard.Show(); // buka form dashboard
+                    cmd.Parameters.AddWithValue("@user", username);
+                    cmd.Parameters.AddWithValue("@pass", password);
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        
+                        idUserLogin = Convert.ToInt32(dr["id_user"]);
+                        string role = dr["role"].ToString();
+                        dr.Close(); 
+
+                       
+
+                        if (role == "admin")
+                        {
+                            
+                            MessageBox.Show("Login Admin Berhasil!");
+                            this.Hide();
+                            DashboardAdmin admin = new DashboardAdmin();
+                            admin.Show();
+                        }
+                        else if (role == "user")
+                        {
+                           
+                            SqlCommand getPelanggan = new SqlCommand(
+                                "SELECT id_pelanggan FROM tb_pelanggan WHERE id_user=@id",
+                                con
+                            );
+                            getPelanggan.Parameters.AddWithValue("@id", idUserLogin);
+
+                            object idPel = getPelanggan.ExecuteScalar();
+
+                            if (idPel == null)
+                            {
+                                
+                                MessageBox.Show("Error: Data profil pelanggan tidak ditemukan. Hubungi Admin.");
+                                return;
+                            }
+
+                            idPelangganLogin = Convert.ToInt32(idPel);
+
+                            MessageBox.Show("Login Berhasil!");
+                            this.Hide();
+                            FormRentalUser userForm = new FormRentalUser(); 
+                            userForm.Show();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username atau Password salah!", "Gagal Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Username atau Password salah!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error Koneksi: " + ex.Message);
                 }
+            }
+        }
 
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRegistrasi reg = new FormRegistrasi();
+            reg.Show();
         }
     }
 }

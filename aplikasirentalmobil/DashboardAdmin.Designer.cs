@@ -62,6 +62,7 @@
             this.btnPelanggan.TabIndex = 2;
             this.btnPelanggan.Text = "Kelola Pelanggan";
             this.btnPelanggan.UseVisualStyleBackColor = true;
+            this.btnPelanggan.Click += new System.EventHandler(this.btnPelanggan_Click);
             // 
             // btnTransaksi
             // 
@@ -71,6 +72,7 @@
             this.btnTransaksi.TabIndex = 3;
             this.btnTransaksi.Text = "Kelola Transaksi";
             this.btnTransaksi.UseVisualStyleBackColor = true;
+            this.btnTransaksi.Click += new System.EventHandler(this.btnTransaksi_Click);
             // 
             // btnLogout
             // 
@@ -80,6 +82,7 @@
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // DashboardAdmin
             // 
@@ -92,7 +95,9 @@
             this.Controls.Add(this.btnMobil);
             this.Controls.Add(this.label1);
             this.Name = "DashboardAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashboardAdmin";
+            this.Load += new System.EventHandler(this.DashboardAdmin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
