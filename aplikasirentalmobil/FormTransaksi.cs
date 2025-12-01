@@ -247,5 +247,25 @@ namespace aplikasirentalmobil
         {
             this.Close();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProses_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHitung_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

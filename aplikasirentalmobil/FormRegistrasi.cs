@@ -93,7 +93,24 @@ namespace aplikasirentalmobil
             }
         }
 
-        private void btnBackToLogin_Click(object sender, EventArgs e)
+        
+
+        private void FormRegistrasi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 login = new Form1();

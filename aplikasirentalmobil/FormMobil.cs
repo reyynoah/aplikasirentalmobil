@@ -228,5 +228,15 @@ namespace aplikasirentalmobil
         {
             this.Close(); 
         }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMobil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

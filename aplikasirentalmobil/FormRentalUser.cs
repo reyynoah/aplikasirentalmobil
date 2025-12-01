@@ -136,5 +136,15 @@ namespace aplikasirentalmobil
                 this.Hide();
             }
         }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMobil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

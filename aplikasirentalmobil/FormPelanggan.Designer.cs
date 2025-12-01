@@ -28,189 +28,245 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNama = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSimpan = new System.Windows.Forms.Button();
             this.dgvPelanggan = new System.Windows.Forms.DataGridView();
-            this.txtAlamat = new System.Windows.Forms.TextBox();
-            this.txtTelepon = new System.Windows.Forms.TextBox();
-            this.txtKTP = new System.Windows.Forms.TextBox();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnHapus = new System.Windows.Forms.Button();
-            this.btnBersihkan = new System.Windows.Forms.Button();
-            this.btnKembali = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtKTP = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTelepon = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtAlamat = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNama = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnKembali = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBersihkan = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHapus = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSimpan = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPelanggan)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(300, 79);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(100, 20);
-            this.txtNama.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(238, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "nama";
-            // 
-            // btnSimpan
-            // 
-            this.btnSimpan.Location = new System.Drawing.Point(531, 86);
-            this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(75, 32);
-            this.btnSimpan.TabIndex = 2;
-            this.btnSimpan.Text = "SIMPAN";
-            this.btnSimpan.UseVisualStyleBackColor = true;
-            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // dgvPelanggan
             // 
             this.dgvPelanggan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPelanggan.Location = new System.Drawing.Point(12, 288);
+            this.dgvPelanggan.Location = new System.Drawing.Point(61, 79);
             this.dgvPelanggan.Name = "dgvPelanggan";
-            this.dgvPelanggan.Size = new System.Drawing.Size(475, 150);
+            this.dgvPelanggan.Size = new System.Drawing.Size(316, 328);
             this.dgvPelanggan.TabIndex = 3;
             this.dgvPelanggan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPelanggan_CellClick);
             // 
-            // txtAlamat
+            // panel1
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(300, 114);
-            this.txtAlamat.Name = "txtAlamat";
-            this.txtAlamat.Size = new System.Drawing.Size(100, 20);
-            this.txtAlamat.TabIndex = 4;
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.panel1.Location = new System.Drawing.Point(2, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(802, 60);
+            this.panel1.TabIndex = 44;
             // 
-            // txtTelepon
+            // guna2HtmlLabel1
             // 
-            this.txtTelepon.Location = new System.Drawing.Point(300, 150);
-            this.txtTelepon.Name = "txtTelepon";
-            this.txtTelepon.Size = new System.Drawing.Size(100, 20);
-            this.txtTelepon.TabIndex = 5;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(240, 7);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(322, 40);
+            this.guna2HtmlLabel1.TabIndex = 43;
+            this.guna2HtmlLabel1.Text = "FORM PELANGGAN";
             // 
             // txtKTP
             // 
-            this.txtKTP.Location = new System.Drawing.Point(300, 188);
+            this.txtKTP.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtKTP.BorderRadius = 10;
+            this.txtKTP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKTP.DefaultText = "";
+            this.txtKTP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtKTP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtKTP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKTP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKTP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKTP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKTP.Location = new System.Drawing.Point(407, 258);
             this.txtKTP.Name = "txtKTP";
-            this.txtKTP.Size = new System.Drawing.Size(100, 20);
-            this.txtKTP.TabIndex = 6;
+            this.txtKTP.PlaceholderText = "Nomor Induk KTP";
+            this.txtKTP.SelectedText = "";
+            this.txtKTP.Size = new System.Drawing.Size(256, 36);
+            this.txtKTP.TabIndex = 48;
             // 
-            // btnEdit
+            // txtTelepon
             // 
-            this.btnEdit.Location = new System.Drawing.Point(531, 143);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 32);
-            this.btnEdit.TabIndex = 7;
-            this.btnEdit.Text = "EDIT";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.txtTelepon.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtTelepon.BorderRadius = 10;
+            this.txtTelepon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelepon.DefaultText = "";
+            this.txtTelepon.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTelepon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTelepon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelepon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTelepon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelepon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTelepon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTelepon.Location = new System.Drawing.Point(407, 202);
+            this.txtTelepon.Name = "txtTelepon";
+            this.txtTelepon.PlaceholderText = "Nomor HP";
+            this.txtTelepon.SelectedText = "";
+            this.txtTelepon.Size = new System.Drawing.Size(256, 36);
+            this.txtTelepon.TabIndex = 47;
             // 
-            // btnHapus
+            // txtAlamat
             // 
-            this.btnHapus.Location = new System.Drawing.Point(531, 188);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(75, 32);
-            this.btnHapus.TabIndex = 8;
-            this.btnHapus.Text = "HAPUS";
-            this.btnHapus.UseVisualStyleBackColor = true;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
+            this.txtAlamat.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtAlamat.BorderRadius = 10;
+            this.txtAlamat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAlamat.DefaultText = "";
+            this.txtAlamat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAlamat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAlamat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlamat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAlamat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlamat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAlamat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAlamat.Location = new System.Drawing.Point(407, 141);
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.PlaceholderText = "Alamat";
+            this.txtAlamat.SelectedText = "";
+            this.txtAlamat.Size = new System.Drawing.Size(256, 36);
+            this.txtAlamat.TabIndex = 46;
             // 
-            // btnBersihkan
+            // txtNama
             // 
-            this.btnBersihkan.Location = new System.Drawing.Point(531, 241);
-            this.btnBersihkan.Name = "btnBersihkan";
-            this.btnBersihkan.Size = new System.Drawing.Size(75, 32);
-            this.btnBersihkan.TabIndex = 9;
-            this.btnBersihkan.Text = "CLEAR";
-            this.btnBersihkan.UseVisualStyleBackColor = true;
-            this.btnBersihkan.Click += new System.EventHandler(this.btnBersihkan_Click);
+            this.txtNama.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtNama.BorderRadius = 10;
+            this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNama.DefaultText = "";
+            this.txtNama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNama.Location = new System.Drawing.Point(407, 84);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.PlaceholderText = "Nama";
+            this.txtNama.SelectedText = "";
+            this.txtNama.Size = new System.Drawing.Size(256, 36);
+            this.txtNama.TabIndex = 45;
             // 
             // btnKembali
             // 
-            this.btnKembali.Location = new System.Drawing.Point(531, 297);
+            this.btnKembali.BorderRadius = 15;
+            this.btnKembali.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKembali.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKembali.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKembali.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKembali.ForeColor = System.Drawing.Color.White;
+            this.btnKembali.Location = new System.Drawing.Point(694, 263);
             this.btnKembali.Name = "btnKembali";
-            this.btnKembali.Size = new System.Drawing.Size(75, 32);
-            this.btnKembali.TabIndex = 10;
+            this.btnKembali.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnKembali.Size = new System.Drawing.Size(75, 31);
+            this.btnKembali.TabIndex = 53;
             this.btnKembali.Text = "KEMBALI";
-            this.btnKembali.UseVisualStyleBackColor = true;
-            this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
-            // label2
+            // btnBersihkan
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(238, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "alamat";
+            this.btnBersihkan.BorderRadius = 15;
+            this.btnBersihkan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBersihkan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBersihkan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBersihkan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBersihkan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBersihkan.ForeColor = System.Drawing.Color.White;
+            this.btnBersihkan.Location = new System.Drawing.Point(694, 222);
+            this.btnBersihkan.Name = "btnBersihkan";
+            this.btnBersihkan.Size = new System.Drawing.Size(75, 31);
+            this.btnBersihkan.TabIndex = 52;
+            this.btnBersihkan.Text = "CLEAR";
             // 
-            // label3
+            // btnHapus
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(238, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "telepon";
+            this.btnHapus.BorderRadius = 15;
+            this.btnHapus.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHapus.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHapus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHapus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHapus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHapus.ForeColor = System.Drawing.Color.White;
+            this.btnHapus.Location = new System.Drawing.Point(694, 158);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(75, 31);
+            this.btnHapus.TabIndex = 51;
+            this.btnHapus.Text = "HAPUS";
             // 
-            // label4
+            // btnEdit
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(238, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "ktp";
+            this.btnEdit.BorderRadius = 15;
+            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(694, 121);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 31);
+            this.btnEdit.TabIndex = 50;
+            this.btnEdit.Text = "EDIT";
+            // 
+            // btnSimpan
+            // 
+            this.btnSimpan.BorderRadius = 15;
+            this.btnSimpan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSimpan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSimpan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSimpan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSimpan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSimpan.ForeColor = System.Drawing.Color.White;
+            this.btnSimpan.Location = new System.Drawing.Point(694, 84);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(75, 31);
+            this.btnSimpan.TabIndex = 49;
+            this.btnSimpan.Text = "TAMBAH";
             // 
             // FormPelanggan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.btnBersihkan);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.txtKTP);
             this.Controls.Add(this.txtTelepon);
             this.Controls.Add(this.txtAlamat);
-            this.Controls.Add(this.dgvPelanggan);
-            this.Controls.Add(this.btnSimpan);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNama);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dgvPelanggan);
             this.Name = "FormPelanggan";
             this.Text = "FormPelanggan";
             this.Load += new System.EventHandler(this.FormPelanggan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPelanggan)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtNama;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.DataGridView dgvPelanggan;
-        private System.Windows.Forms.TextBox txtAlamat;
-        private System.Windows.Forms.TextBox txtTelepon;
-        private System.Windows.Forms.TextBox txtKTP;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnHapus;
-        private System.Windows.Forms.Button btnBersihkan;
-        private System.Windows.Forms.Button btnKembali;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtKTP;
+        private Guna.UI2.WinForms.Guna2TextBox txtTelepon;
+        private Guna.UI2.WinForms.Guna2TextBox txtAlamat;
+        private Guna.UI2.WinForms.Guna2TextBox txtNama;
+        private Guna.UI2.WinForms.Guna2Button btnKembali;
+        private Guna.UI2.WinForms.Guna2Button btnBersihkan;
+        private Guna.UI2.WinForms.Guna2Button btnHapus;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnSimpan;
     }
 }
